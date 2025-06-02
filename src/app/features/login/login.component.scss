@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&family=Urbanist:wght@300;800&display=swap');
+
+.page {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .logo-side {
+    flex: 1;
+    background: radial-gradient(circle at top left, #333355, #1e1e2f);
+    display: flex;
+    flex-direction: column; // <-- Empilha a logo e a tagline
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center; // centraliza textos no eixo horizontal
+
+    .logo {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 700;
+      font-size: 3rem;
+      letter-spacing: -1px;
+      color: #ffffff;
+      text-transform: uppercase;
+
+      span {
+        font-family: 'Urbanist', sans-serif;
+        font-weight: 800;
+        color: #00ffd1;
+        text-shadow: 0 0 5px rgba(0, 255, 209, 0.5);
+      }
+    }
+
+    .tagline {
+      margin-top: 1rem;
+      font-family: 'Lexend', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #ddddff;
+      max-width: 300px;
+      line-height: 1.4;
+    }
+  }
+
+  .form-side {
+    flex: 1;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #1e1e2f;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        label {
+          font-weight: 600;
+          font-size: 1rem;
+          color: #555;
+        }
+
+        input {
+          padding: 0.75rem;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+        }
+
+        .error {
+          font-size: 0.875rem;
+          color: #e63946;
+          margin-top: 0.25rem;
+        }
+      }
+
+      button {
+        margin-top: 1rem;
+        padding: 0.75rem;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .logo-side {
+      flex: none;
+      height: 200px;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .form-side {
+      padding: 2rem;
+    }
+  }
+}
