@@ -3,3 +3,31 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+:root {
+  --font-primary: 'Lexend', sans-serif;
+
+  // Paleta de Cores Elevada
+  --color-primary: #00ffd1;
+  --color-primary-dark: #00c3b1;
+  --color-primary-glow: rgba(0, 255, 209, 0.3);
+  --color-dark-bg: #1b1b2f;
+  --color-main-bg: #f7f8fc; // Um tom mais limpo
+  --color-card-bg: #ffffff;
+  --gradient-primary: linear-gradient(45deg, #00ffd1, #00c3b1);
+
+  // Cores de Texto
+  --text-dark: #1b1b2f;
+  --text-headings: #2d3436; // Um preto mais suave
+  --text-body: #5a6a7b;
+  --text-subtle: #8a9cb1;
+
+  // UI & Bordas
+  --border-color: #e8eef6;
+  --input-bg: #ffffff;
+
+  // Sombras e Bordas
+  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.02);
+  --shadow-medium: 0 8px 30px -10px rgba(27, 27, 47, 0.15);
+  --radius-card: 16px;
+  --radius-btn: 10px;
+}

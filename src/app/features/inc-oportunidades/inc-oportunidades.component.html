@@ -1,0 +1,88 @@
+<div class="empresa-dashboard">
+  <aside class="side-nav">
+    <h2 class="logo">Flex<span>Hire</span></h2>
+    <nav>
+      <a href="/inc-home" >🏠 Dashboard</a>
+      <a href="/oportunidades" class="active">📋 Oportunidades</a>
+      <a href="/nova-oportunidade">➕ Nova Vaga</a>
+      <a href="/inc-profile">👤 Meu Perfil</a>
+    </nav>
+    <a href="/login">
+      <button class="logout">Sair</button>
+    </a>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <h1>Minhas Oportunidades</h1>
+      <a href="/empresa/nova-oportunidade" class="btn btn-primary">+ Nova Vaga</a>
+    </header>
+
+    <section class="content-section">
+      <div class="filters-row">
+        <input type="text" placeholder="Buscar por título ou cidade..." />
+        <select>
+          <option value="">Todas as categorias</option>
+          <option>Eventos</option>
+          <option>Entregas</option>
+          <option>Limpeza</option>
+          <option>Obras</option>
+        </select>
+        <select>
+          <option value="">Todos os status</option>
+          <option>Ativa</option>
+          <option>Finalizada</option>
+          <option>Expirada</option>
+        </select>
+        <button class="btn btn-primary btn-filter">Filtrar</button>
+      </div>
+
+      <section class="jobs-list">
+        <article class="job-card">
+          <div class="job-info">
+            <h3>Garçom para evento noturno</h3>
+            <p><strong>Categoria:</strong> Eventos</p>
+            <p><strong>Local:</strong> Curitiba</p>
+            <p><strong>Status:</strong> <span class="status ativa">Ativa</span></p>
+            <p><strong>Publicado em:</strong> 21/06/2025</p>
+          </div>
+          <div class="job-actions">
+            <a href="/empresa/editar/1" class="btn-action edit">✏️ Editar</a>
+            <a href="/empresa/candidatos/1" class="btn-action candidates">👥 Candidatos</a>
+            <button class="btn-action delete">🗑️ Excluir</button>
+          </div>
+        </article>
+
+        <article class="job-card">
+          <div class="job-info">
+            <h3>Entregador para rota expressa</h3>
+            <p><strong>Categoria:</strong> Entregas</p>
+            <p><strong>Local:</strong> São Paulo</p>
+            <p><strong>Status:</strong> <span class="status finalizada">Finalizada</span></p>
+            <p><strong>Publicado em:</strong> 17/06/2025</p>
+          </div>
+          <div class="job-actions">
+            <a href="/empresa/editar/2" class="btn-action edit">✏️ Editar</a>
+            <a href="/empresa/candidatos/2" class="btn-action candidates">👥 Candidatos</a>
+            <button class="btn-action delete">🗑️ Excluir</button>
+          </div>
+        </article>
+
+        <article class="job-card">
+          <div class="job-info">
+            <h3>Faxineira turno manhã</h3>
+            <p><strong>Categoria:</strong> Limpeza</p>
+            <p><strong>Local:</strong> Belo Horizonte</p>
+            <p><strong>Status:</strong> <span class="status expirada">Expirada</span></p>
+            <p><strong>Publicado em:</strong> 10/06/2025</p>
+          </div>
+          <div class="job-actions">
+            <a href="/empresa/editar/3" class="btn-action edit">✏️ Editar</a>
+            <a href="/empresa/candidatos/3" class="btn-action candidates">👥 Candidatos</a>
+            <button class="btn-action delete">🗑️ Excluir</button>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+</div>

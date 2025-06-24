@@ -43,7 +43,15 @@ export class LoginComponent {
 
 
   onSubmit(){
-    if (this.loginForm.valid) {
+    const emailValue = this.loginForm.get('email')?.value as string;
+
+    if(emailValue && emailValue.toLowerCase().includes('adm')){
+      this.spinner.show();
+      setTimeout(() => {
+        this.router.navigate(['/inc-home']);
+        this.spinner.hide();
+      }, 3000);
+    } else if (this.loginForm.valid) {
       this.spinner.show();
       setTimeout(() => {
         this.router.navigate(['/home']);

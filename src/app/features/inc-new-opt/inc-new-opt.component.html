@@ -1,0 +1,81 @@
+<div class="empresa-dashboard">
+  <aside class="side-nav">
+    <h2 class="logo">Flex<span>Hire</span></h2>
+    <nav>
+      <a href="/inc-home" >🏠 Dashboard</a>
+      <a href="/oportunidades" >📋 Oportunidades</a>
+      <a href="/nova-oportunidade" class="active">➕ Nova Vaga</a>
+      <a href="/inc-profile">👤 Meu Perfil</a>
+    </nav>
+    <a href="/login">
+      <button class="logout">Sair</button>
+    </a>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <h1>Nova Oportunidade</h1>
+    </header>
+
+    <form class="vaga-form">
+      <section class="form-group">
+        <h3>Dados da Vaga</h3>
+        <label for="titulo">Título da Vaga</label>
+        <input id="titulo" type="text" placeholder="Ex: Garçom para evento noturno" required />
+
+        <label for="categoria">Categoria</label>
+        <select id="categoria" required>
+          <option value="" disabled selected>Selecione a categoria</option>
+          <option>Eventos</option>
+          <option>Entregas</option>
+          <option>Limpeza</option>
+          <option>Obras</option>
+        </select>
+
+        <label for="descricao">Descrição</label>
+        <textarea
+          id="descricao"
+          rows="5"
+          placeholder="Descreva os detalhes da vaga..."
+          required
+        ></textarea>
+      </section>
+
+      <section class="form-group">
+        <h3>Localização</h3>
+        <label for="cidade">Cidade</label>
+        <input id="cidade" type="text" placeholder="Ex: Curitiba" required />
+
+        <label for="endereco">Endereço (opcional)</label>
+        <input id="endereco" type="text" placeholder="Ex: Rua das Flores, 123" />
+      </section>
+
+      <section class="form-group">
+        <h3>Requisitos</h3>
+        <label for="requisitos">Principais requisitos</label>
+        <textarea
+          id="requisitos"
+          rows="3"
+          placeholder="Ex: experiência, disponibilidade, idade mínima"
+        ></textarea>
+      </section>
+
+      <section class="form-group grid-dates">
+        <div>
+          <label for="data-inicio">Data de Início</label>
+          <input id="data-inicio" type="date" required />
+        </div>
+
+        <div>
+          <label for="data-fim">Data de Término (opcional)</label>
+          <input id="data-fim" type="date" />
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Salvar Vaga</button>
+        <button type="button" class="btn btn-secondary">Cancelar</button>
+      </div>
+    </form>
+  </main>
+</div>

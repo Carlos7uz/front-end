@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--color-main-bg);
+}
+
+.empresa-dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.side-nav {
+  width: 240px;
+  background: #1b1b2f;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .logo {
+    font-size: 1.8rem;
+
+    span {
+      color: #00ffd1;
+    }
+  }
+
+  nav {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 0.6rem 0.75rem;
+      border-left: 4px solid transparent;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s;
+
+      &.active,
+      &:hover {
+        color: #00ffd1;
+        border-left-color: #00ffd1;
+        background: rgba(0, 255, 209, 0.1);
+      }
+    }
+  }
+
+  .logout {
+    background: #00ffd1;
+    color: #1b1b2f;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #00c3b1;
+    }
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+/* ============================================= */
+/* 3. COMPONENTES REUTILIZÁVEIS (DESIGN SYSTEM)  */
+/* ============================================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-headings);
+    margin: 0;
+  }
+  p {
+    color: var(--text-subtle);
+    margin: 0.25rem 0 0 0;
+  }
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+  &:hover { background: var(--color-primary-dark); }
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-headings);
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+/* ============================================= */
+/* 4. ESTILOS ESPECÍFICOS - PÁGINA DE PERFIL     */
+/* ============================================= */
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px; // Coluna principal e uma sidebar
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: var(--radius-card);
+    border: 1px solid #eee;
+    flex-shrink: 0;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-headings);
+  }
+  .segmento {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-subtle);
+    font-size: 1rem;
+  }
+}
+
+.card-body p {
+  color: var(--text-body);
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Grade de informações com estilo de formulário
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &.full-width {
+    grid-column: 1 / -1; // Ocupa a largura toda
+  }
+
+  label {
+    font-weight: 600;
+    color: var(--text-subtle);
+    font-size: 0.9rem;
+  }
+
+  // Estilo inspirado nos inputs do seu form para consistência
+  span {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: var(--radius-btn);
+    border: var(--border-inputs);
+    background-color: #fcfdff; // Um leve tom para parecer um campo
+    color: var(--text-body);
+  }
+}
+
+// Sidebar de Ações
+.actions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.action-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-body);
+  transition: background 0.2s ease, color 0.2s ease;
+
+  i {
+    color: var(--text-subtle);
+    transition: color 0.2s ease;
+  }
+
+  &:hover {
+    background: var(--color-secondary-action-bg);
+    color: var(--text-headings);
+    i {
+        color: var(--text-headings);
+    }
+  }
+
+  &.danger:hover {
+    background: #fff5f5;
+    color: var(--color-danger);
+    i {
+        color: var(--color-danger);
+    }
+  }
+}

@@ -1,0 +1,139 @@
+<body>
+
+  <div class="app-container">
+    <!-- =================================== -->
+    <!--      SIDE NAVIGATION (USUÁRIO)      -->
+    <!-- =================================== -->
+    <aside class="side-nav">
+      <div class="nav-top">
+          <h2 class="logo">Flex<span>Hire</span></h2>
+          <nav>
+            <a href="#" class="active"><i class="ti ti-search"></i> Buscar Vagas</a>
+            <a href="#"><i class="ti ti-file-text"></i> Minhas Candidaturas</a>
+            <a href="#"><i class="ti ti-user-circle"></i> Meu Perfil</a>
+          </nav>
+      </div>
+      <div class="nav-bottom">
+          <a href="/">
+            <button class="logout"><i class="ti ti-logout"></i> Sair</button>
+          </a>
+      </div>
+    </aside>
+
+    <!-- =================================== -->
+    <!--      MAIN CONTENT (CONTEÚDO)      -->
+    <!-- =================================== -->
+    <main class="main-content">
+      <header class="header">
+        <div class="header-info">
+          <h1>Explore Oportunidades</h1>
+          <p>Encontre trabalhos flexíveis e tarefas sob demanda para você.</p>
+        </div>
+      </header>
+
+      <!-- Seção de Filtros com novo design -->
+      <section class="filters-container">
+          <div class="filter-input-wrapper">
+              <i class="ti ti-briefcase"></i>
+              <input type="text" placeholder="Busque por título, habilidade...">
+          </div>
+          <div class="filter-input-wrapper">
+              <i class="ti ti-map-pin"></i>
+              <input type="text" placeholder="Cidade ou 'remoto'">
+          </div>
+          <button class="btn-primary-filter">
+              <span>Buscar</span>
+              <i class="ti ti-arrow-right"></i>
+          </button>
+      </section>
+
+      <!-- Grid de Vagas (Gigs) -->
+      <section class="gigs-grid">
+          <!-- Card de Vaga 1 - Evento -->
+          <div class="gig-card">
+              <div class="card-header">
+                  <div class="category-icon" style="--icon-bg: #e0f8f4;">
+                      <i class="ti ti-users" style="--icon-color: #00b894;"></i>
+                  </div>
+                  <div class="payment">R$ 180,00</div>
+              </div>
+              <div class="card-body">
+                  <h3>Recepcionista para Evento</h3>
+                  <p class="hirer">Contratante: <strong>Madero Restaurantes</strong></p>
+              </div>
+              <div class="card-footer">
+                  <div class="details">
+                      <span><i class="ti ti-clock"></i> 6 horas</span>
+                      <span><i class="ti ti-map-pin"></i> Curitiba, PR</span>
+                  </div>
+                  <button class="btn-details">Ver Detalhes</button>
+              </div>
+          </div>
+
+          <!-- Card de Vaga 2 - Entrega -->
+          <div class="gig-card">
+              <div class="card-header">
+                   <div class="category-icon" style="--icon-bg: #fbecec;">
+                      <i class="ti ti-moped" style="--icon-color: #d63031;"></i>
+                  </div>
+                  <div class="payment">R$ 90,00</div>
+              </div>
+              <div class="card-body">
+                  <h3>Entrega de Documentos Urgentes</h3>
+                  <p class="hirer">Contratante: <strong>Loggi</strong></p>
+              </div>
+              <div class="card-footer">
+                  <div class="details">
+                      <span><i class="ti ti-clock"></i> 2-3 horas</span>
+                      <span><i class="ti ti-map-pin"></i> São Paulo, SP</span>
+                  </div>
+                  <button class="btn-details">Ver Detalhes</button>
+              </div>
+          </div>
+
+          <!-- Card de Vaga 3 - Montagem -->
+          <div class="gig-card">
+              <div class="card-header">
+                   <div class="category-icon" style="--icon-bg: #e9e7fc;">
+                      <i class="ti ti-wrench" style="--icon-color: #6c5ce7;"></i>
+                  </div>
+                  <div class="payment">R$ 250,00</div>
+              </div>
+              <div class="card-body">
+                  <h3>Montador de Móveis (IKEA)</h3>
+                  <p class="hirer">Contratante: <strong>GetNinjas</strong></p>
+              </div>
+              <div class="card-footer">
+                  <div class="details">
+                      <span><i class="ti ti-clock"></i> 1 dia</span>
+                      <span><i class="ti ti-map-pin"></i> Remoto (Cliente)</span>
+                  </div>
+                  <button class="btn-details">Ver Detalhes</button>
+              </div>
+          </div>
+
+          <!-- Card de Vaga 4 - Limpeza -->
+          <div class="gig-card">
+              <div class="card-header">
+                   <div class="category-icon" style="--icon-bg: #e0f8ff;">
+                      <i class="ti ti-sparkles" style="--icon-color: #0984e3;"></i>
+                  </div>
+                  <div class="payment">R$ 150,00</div>
+              </div>
+              <div class="card-body">
+                  <h3>Limpeza Pós-Obra</h3>
+                  <p class="hirer">Contratante: <strong>Parafuzo</strong></p>
+              </div>
+              <div class="card-footer">
+                  <div class="details">
+                      <span><i class="ti ti-clock"></i> 4 horas</span>
+                      <span><i class="ti ti-map-pin"></i> Rio de Janeiro, RJ</span>
+                  </div>
+                  <button class="btn-details">Ver Detalhes</button>
+              </div>
+          </div>
+      </section>
+    </main>
+  </div>
+
+  </body>
