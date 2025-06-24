@@ -207,14 +207,12 @@
       }
     }
   }
-
   footer {
     background: #f1f1f4;
     padding: 2rem 1rem;
     font-size: 0.9rem;
     color: #666;
     text-align: center;
-
     .footer-content {
       display: flex;
       justify-content: space-between;
@@ -222,7 +220,6 @@
       max-width: 960px;
       margin: 0 auto;
       padding-bottom: 1rem;
-
       .footer-left {
         text-align: left;
 
@@ -231,7 +228,6 @@
           margin-bottom: 0.5rem;
         }
       }
-
       .footer-links {
         display: flex;
         gap: 1.5rem;
@@ -246,13 +242,11 @@
         }
       }
     }
-
     .footer-bottom {
       border-top: 1px solid #ddd;
       padding-top: 1rem;
     }
   }
-
   @media (max-width: 768px) {
     .hero .search-box {
       flex-direction: column;
@@ -278,12 +272,9 @@
   }
 }
 .btn-login {
-  // 2. Use 'position: absolute' para "flutuar" o botão
   position: absolute;
-  top: 2rem;    // Distância do topo
-  right: 2rem;  // Distância da direita
-
-  // Estilo do botão (mantido da sugestão anterior)
+  top: 2rem;
+  right: 2rem;
   background-color: transparent;
   color: #1b1b2f;
   border: 2px solid #1b1b2f;
@@ -292,8 +283,6 @@
   border-radius: 8px;
   font-weight: 700;
   font-size: 0.9rem;
-  transition: all 0.2s ease-in-out;
-
   &:hover {
     background-color: #1b1b2f;
     color: #fff;
