@@ -1,0 +1,97 @@
+/* ============================================= */
+/* TEMA CENTRAL E COMPONENTES BASE (SILENCIOSOS) */
+/* ============================================= */
+
+// 1. Variáveis Globais (Seu Design System)
+:root {
+  // Cores Primárias
+  --c-primary: #00ffd1;
+  --c-primary-dark: #00c3b1;
+  --c-dark: #1b1b2f;
+  --c-light: #ffffff;
+  --c-gradient: linear-gradient(to right, #00ffd1, #00b7ff);
+
+  // Cores de UI e Texto
+  --c-background: #f9fafc;
+  --c-text-base: #444;
+  --c-text-headings: #222;
+  --c-text-on-dark: #ccc;
+  --c-border: #ccc;
+
+  // Cores de Status
+  --c-status-active: #00b894;
+  --c-status-done: #0984e3;
+  --c-status-danger: #d63031;
+  --c-status-secondary: #6c5ce7;
+
+  // Medidas e Fontes
+  --font-main: 'Lexend', sans-serif;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-main: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --transition-main: all 0.2s ease-in-out;
+}
+
+// 2. Placeholders (Componentes Base Silenciosos)
+// Estes não geram CSS a menos que sejam chamados com @extend
+
+// Botão Base
+%btn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-main);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Botão Primário (Fundo Ciano)
+%btn-primary {
+  @extend %btn;
+  background: var(--c-primary);
+  color: var(--c-dark);
+  &:hover { background: var(--c-primary-dark); }
+}
+
+// Botão Escuro (para fundos claros/gradientes)
+%btn-dark {
+  @extend %btn;
+  background: var(--c-dark);
+  color: var(--c-light);
+  &:hover { background: #333355; }
+}
+
+// Botão Secundário (cinza)
+%btn-secondary {
+    @extend %btn;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    &:hover { background: #e0e0e0; }
+}
+
+// Card Base
+%card {
+  background: var(--c-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-main);
+}
+
+// Input Base
+%input {
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  &:focus {
+    border-color: var(--c-primary);
+    outline: none;
+  }
+}

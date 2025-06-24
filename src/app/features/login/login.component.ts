@@ -54,7 +54,7 @@ export class LoginComponent {
     } else if (this.loginForm.valid) {
       this.spinner.show();
       setTimeout(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/jobs']);
         this.spinner.hide();
       }, 3000);
     } else {
